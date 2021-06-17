@@ -1,4 +1,4 @@
-ambiente_virtual/
+ejercicios_django/env
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
