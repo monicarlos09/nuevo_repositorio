@@ -139,3 +139,4 @@ conf/db/init/*
 # deploy artifacts
 staticfiles/
 
+ejercicios_django/.DS_Store
