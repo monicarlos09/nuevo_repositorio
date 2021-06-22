@@ -1,5 +1,3 @@
-ejercicios_django/env
-ejercicios_django/:DS_Store
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -140,4 +138,4 @@ conf/db/init/*
 # deploy artifacts
 staticfiles/
 
-ejercicios_django/.DS_Store
+**/.DS_Store
