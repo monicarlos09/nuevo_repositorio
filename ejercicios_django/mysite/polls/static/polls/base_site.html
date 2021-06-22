@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+
+<ul class="sidebar-nav">
+
+    {% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site
+    admin')
+    }}{% endblock %}
+
+    {% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">Polls Administration</a></h1>
+    {% endblock %}
+
+    {% block nav-global %}{% endblock %}
+
+    {{ site_header|default:_('Django administration') }}
+
+    {% if user.is_authenticated %}
+    <li>User: {{ user.get_username }}</li>
+    <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+    {% else %}
+    <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+    {% endif %}
+</ul>
