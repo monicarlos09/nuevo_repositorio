@@ -13,18 +13,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-#from django.urls import path
-from django.urls import include, path
 from django.contrib.auth import views as auth_views
+from django.urls import include
+from django.urls import path
+
+# from django.urls import path
 
 urlpatterns = [
-    path('polls/', include('polls.urls')),
-    path('admin/', admin.site.urls),
-    path('', auth_views.LoginView.as_view()),
+    path("polls/", include("polls.urls")),
+    path("admin/", admin.site.urls),
+    path("", auth_views.LoginView.as_view()),
 ]
 
 # Add Django site authentication urls (for login, logout, password management)
 
 urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
