@@ -7,8 +7,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
-      MARIADB_USER: user
-      MARIADB_PASSWORD: user
+      MARIADB_USER: root
+      MARIADB_PASSWORD: example
       MARIADB_DATABASE: db_polls
     ports:
       - "3306:3306"
